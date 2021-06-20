@@ -8,13 +8,13 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/articles">
+            <a class="nav-link" href="/articles">
               <span data-feather="file-text"></span>
               Articles
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/questionnaire">
+            <a class="nav-link active" aria-current="page" href="#">
               <span data-feather="check-square"></span>
               Questionnaires
             </a>
@@ -47,7 +47,7 @@
         {% endblock %}
 
         {% block main_content %}
-        <h1 class="h2">Steps to wash hands</h1>
+        <h1 class="h2">Questionnaires</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2">
             <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
@@ -55,22 +55,16 @@
           </div>
         </div>
       </div>
-      
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Steps to wash hands</h5>
-            <p class="card-text">
-                <ol>
-                    <li>Wet hands with water</li>
-                    <li>Apply enough soap to cover all hand surfaces</li>
-                    <li>Rub hands together and scrub everywhere</li>
-                    <li>Wash the front and back of your hands, in between your fingers, and under your nails</li>
-                    <li>Rinse hands with water</li>
-                    <li>Dry hands completely using a single-use towel or air dry</li>
-                </ol>
-            </p>
-            <a href="https://www.cdc.gov/coronavirus/2019-ncov/global-covid-19/handwashing.html" class="card-link">Source</a>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">COVID-19 Self-Assessment Questionnaire</h5>
+                <p class="card-text">The purpose of this questionnaire is for you to self-observe your daily health prior to coming to work. Once you begin your workday, continue to observe yourself for any changes. This questionnaire was developed with criteria from the CDC</p>
+                <a href="/questionnaire/1" class="btn btn-primary">Take COVID-19 Self-Assessment Questionnaire</a>
+              </div>
+            </div>
           </div>
         </div>
-
-      {% endblock %}
+    {% endblock %}

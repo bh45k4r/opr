@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+        {% block sidebar %}
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <span data-feather="home"></span>
+              Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/articles">
+              <span data-feather="file-text"></span>
+              Articles
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/questionnaire">
+              <span data-feather="check-square"></span>
+              Questionnaires
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="rss"></span>
+              Feeds
+            </a>
+          </li>
+        </ul>
+
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+          <span>Administrative</span>
+        </h6>
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="log-in"></span>
+              Medical Institutions
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="log-in"></span>
+              Medical Vendors
+            </a>
+          </li>
+        </ul>
+        {% endblock %}
+
+        {% block main_content %}
+        <h1 class="h2">COVID-19 Self-Assessment Questionnaire</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="btn-group me-2">
+            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+          </div>
+        </div>
+      </div>
+
+              <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">The purpose of this questionnaire is for you to self-observe your daily health prior to coming to work. Once you begin your workday, continue to observe yourself for any changes. This questionnaire was developed with criteria from the CDC.</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Please answer the following questions once you begin your workday. You should also take your temperature every day before reporting to work and write it down. If your temperature is greater than 100°F, or if you answer YES to any of the following questions, please stay home and call your primary physician. </h6>
+            <p class="card-text">
+                <form>
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="yes" id="flexCheckDefault1">
+                      <label class="form-check-label" for="flexCheckDefault1">
+                        Have you been tested for the coronavirus (awaiting results)? If yes, stay home until results are received
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="yes" id="flexCheckDefault2">
+                      <label class="form-check-label" for="flexCheckDefault2">
+                        Has a member of your household been tested for the coronavirus (awaiting results)? If Yes, stay home until results are received
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="yes" id="flexCheckDefault3">
+                      <label class="form-check-label" for="flexCheckDefault3">
+                        Have you traveled out of the country within the last 14 days? If Yes, stay home for 14 days from your arrival back to the United States. Return to work if there are no symptoms
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="yes" id="flexCheckDefault4">
+                      <label class="form-check-label" for="flexCheckDefault4">
+                        Are you experiencing or have you experienced any of the following symptoms in the past 14 days? If you answer YES to at least one of these questions, please stay home and call your healthcare provider
+                        <ul>
+                            <li>Cough (not related to allergies)</li>
+                            <li>Shortness of breath</li>
+                            <li>Difficulty breathing</li>
+                            <li>Fever, Chills</li>
+                            <li>Muscle pain</li>
+                            <li>New loss of taste or smell</li>
+                            <li>Sore throat or headache</li>
+                        </ul>
+                      </label>
+                    </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </p>
+            <a href="http://www.cis.tennessee.edu/sites/default/files/COVID-19%20Self-Assessment%20Questionnaire.pdf">Source</a>
+          </div>
+        </div>
+        <p></p>
+    {% endblock %}
