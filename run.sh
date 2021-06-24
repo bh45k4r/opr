@@ -1,17 +1,17 @@
 #/bin/env bash
 
+echo "sourcing virtualenv..."
+source venv/bin/activate
+
+echo "installing dependencies..."
+pip3 install --quiet --requirement requirements.txt
+
 if [ "$1" == "dev" ]
 then
-    echo "sourcing virtualenv..."
-    source venv/bin/activate
-
-    echo "installing dependencies..."
-    pip3 install --quiet --requirement requirements.txt
-
     echo "starting flask..."
     FLASK_APP=app.py FLASK_ENV=development flask run
 else
-    echo "starting docker image..."
-    docker run --publish 8080:8080 bh45k4r/opr
+    echo "starting gunicorn..."
+    gunicorn app:app --worker-class=eventlet --bind=127.0.0.1:8080
 fi
 
