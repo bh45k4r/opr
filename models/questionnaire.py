@@ -20,12 +20,8 @@ class QuestionnairesModel(BaseModel):
     retrieved using the ID [O(1) operation]
     """
     questionnaire_id = UnicodeAttribute(hash_key=True)
-    """
-    This is the type of questionnaire. E.g. medical institution, medical supply vendor, etc.
-    It would be useful for range queries:
-    https://aws.amazon.com/blogs/database/using-sort-keys-to-organize-data-in-amazon-dynamodb/
-    """
-    questionnaire_type = UnicodeAttribute(range_key=True)
+    # Whether or not the questionnaire is active
+    questionnaire_active = UnicodeAttribute(range_key=True, default="false")
     questionnaire_title = UnicodeAttribute()
     questionnaire_card_title = UnicodeAttribute()
     questionnaire_card_subtitle = UnicodeAttribute()

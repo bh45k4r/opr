@@ -21,7 +21,7 @@ class SuppliesModel(BaseModel):
     """
     supplies_id = UnicodeAttribute(hash_key=True)
     """
-    This is the type of supples. E.g. ppe, oxygen, mask, etc.
+    This is the type of supplies. E.g. ppe, oxygen, mask, etc.
     It would be useful for range queries:
     https://aws.amazon.com/blogs/database/using-sort-keys-to-organize-data-in-amazon-dynamodb/
     """
