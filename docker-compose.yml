@@ -1,9 +1,9 @@
 version: "3.7"
 services:
   web:
-    image: "bh45k4r/opr"
+    #image: "bh45k4r/opr"
     # comment the above and uncomment below to use local Dockerfile
-    #build: .
+    build: .
     ports:
         - "8080:8080"
     depends_on:
