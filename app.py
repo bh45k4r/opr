@@ -59,3 +59,12 @@ def login(user_type):
         return make_response("Unknown User", 404)
     return render_template("login.html", user_type=expanded_user_type)
 
+
+@app.route("/supplies")
+def supplies():
+    """
+    Renders the supplies request/offer page
+
+    """
+    return render_template("supplies.html")
+
